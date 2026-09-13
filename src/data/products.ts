@@ -20,6 +20,7 @@ export const MOCK_PRODUCTS: Product[] = [
     features: ['100% Stretchable Cotton', 'Slim Fit Design', '4 Utility Pockets', 'Machine Washable'],
     popularityScore: 92,
     affiliateUrl: 'https://amazon.in/dp/mock-pants-1',
+    sourceType: 'mock',
     badge: 'Best Value',
     marketplacePrices: [
       { marketplace: 'Amazon', price: 499, url: 'https://amazon.in/dp/mock-pants-1', inStock: true },

@@ -9,10 +9,7 @@ export const Footer: React.FC = () => {
           {/* Brand Info */}
           <div className="md:col-span-1 space-y-3">
             <div className="flex items-center gap-2">
-              <div className="w-7 h-7 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-base">
-                D
-              </div>
-              <span className="text-base font-black text-gray-900">
+              <span className="text-xl font-black text-gray-900">
                 Deal<span className="text-indigo-600">Find</span>
               </span>
             </div>
@@ -21,25 +18,25 @@ export const Footer: React.FC = () => {
             </p>
           </div>
 
-          {/* Product links */}
+          {/* Product & Deals links */}
           <div>
             <h4 className="font-bold text-gray-900 uppercase tracking-wider mb-3 text-[11px]">
-              Discover Products
+              Discover Deals
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/search" className="hover:text-indigo-600 transition-colors">
-                  Search All Products
+                <Link href="/best-products-under-500" className="hover:text-indigo-600 transition-colors">
+                  Deals Under ₹500
+                </Link>
+              </li>
+              <li>
+                <Link href="/best-products-under-1000" className="hover:text-indigo-600 transition-colors">
+                  Deals Under ₹1000
                 </Link>
               </li>
               <li>
                 <Link href="/search?sort=best-value" className="hover:text-indigo-600 transition-colors">
-                  Best Value Deals
-                </Link>
-              </li>
-              <li>
-                <Link href="/search?sort=price-asc" className="hover:text-indigo-600 transition-colors">
-                  Lowest Price Finds
+                  Best Value Finds
                 </Link>
               </li>
               <li>
@@ -53,9 +50,14 @@ export const Footer: React.FC = () => {
           {/* Company */}
           <div>
             <h4 className="font-bold text-gray-900 uppercase tracking-wider mb-3 text-[11px]">
-              Company
+              Company & Guides
             </h4>
             <ul className="space-y-2">
+              <li>
+                <Link href="/blog" className="hover:text-indigo-600 transition-colors font-semibold text-indigo-600">
+                  Blog & Buying Guides
+                </Link>
+              </li>
               <li>
                 <Link href="/about" className="hover:text-indigo-600 transition-colors">
                   About DealFind
@@ -72,9 +74,14 @@ export const Footer: React.FC = () => {
           {/* Legal */}
           <div>
             <h4 className="font-bold text-gray-900 uppercase tracking-wider mb-3 text-[11px]">
-              Legal
+              Legal & Trust
             </h4>
             <ul className="space-y-2">
+              <li>
+                <Link href="/affiliate-disclosure" className="hover:text-indigo-600 transition-colors">
+                  Affiliate Disclosure
+                </Link>
+              </li>
               <li>
                 <Link href="/privacy" className="hover:text-indigo-600 transition-colors">
                   Privacy Policy

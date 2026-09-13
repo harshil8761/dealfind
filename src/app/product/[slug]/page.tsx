@@ -119,7 +119,7 @@ export default async function ProductDetailPage({ params }: ProductPageProps) {
               href={dealUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-bold py-3.5 px-6 rounded-lg text-sm flex items-center justify-center gap-2 shadow-sm transition-all text-center"
+              className="w-full bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-700 text-white font-bold py-3.5 px-6 rounded-lg text-sm flex items-center justify-center gap-2 shadow-sm transition-all text-center"
             >
               <span>View Deal on {product.marketplace}</span>
               <ExternalLink className="w-4 h-4" />

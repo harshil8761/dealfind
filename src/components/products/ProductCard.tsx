@@ -36,7 +36,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       )}
     >
       {/* Top Media Container */}
-      <div className="relative aspect-[4/3] w-full bg-gray-50 overflow-hidden border-b border-gray-100">
+      <div className="relative aspect-4/3 w-full bg-gray-50 overflow-hidden border-b border-gray-100">
         <Link href={`/product/${product.slug}`} className="block w-full h-full">
           <Image
             src={product.image}
@@ -84,13 +84,13 @@ export const ProductCard: React.FC<ProductCardProps> = ({
           />
 
           {/* Action Row: Compare Button + View Deal CTA */}
-          <div className="flex items-center gap-2 pt-1">
+          <div className="flex items-center gap-1.5 pt-1 min-w-0">
             {onCompareToggle && (
               <button
                 type="button"
                 onClick={() => onCompareToggle(product)}
                 className={cn(
-                  'px-2.5 py-2 rounded-lg border text-xs font-semibold flex items-center gap-1.5 transition-all shrink-0 cursor-pointer',
+                  'px-2 py-1.5 rounded-lg border text-xs font-semibold flex items-center justify-center gap-1 transition-all shrink-0 cursor-pointer',
                   isComparing
                     ? 'bg-indigo-50 border-indigo-300 text-indigo-700'
                     : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400'
@@ -106,7 +106,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               href={dealUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-semibold text-xs py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-all shadow-xs whitespace-nowrap"
+              className="flex-1 min-w-0 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-700 text-white font-semibold text-xs py-1.5 px-2.5 rounded-lg flex items-center justify-center gap-1 transition-all shadow-xs whitespace-nowrap overflow-hidden"
             >
               <span>View Deal</span>
               <ExternalLink className="w-3.5 h-3.5 shrink-0" />

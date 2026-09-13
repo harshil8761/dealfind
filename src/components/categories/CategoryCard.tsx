@@ -21,7 +21,7 @@ export const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
     >
       <div>
         <div className="w-10 h-10 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center mb-3 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
-          <IconComponent className="w-5 h-5 stroke-[2]" />
+          <IconComponent className="w-5 h-5 stroke-2" />
         </div>
         <h3 className="text-sm font-semibold text-gray-900 group-hover:text-indigo-600 transition-colors mb-1">
           {category.name}

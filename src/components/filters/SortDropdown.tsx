@@ -14,7 +14,7 @@ interface SortDropdownProps {
 export const SortDropdown: React.FC<SortDropdownProps> = ({ value, onChange, className = '' }) => {
   return (
     <div className={`flex items-center gap-2 ${className}`}>
-      <span className="text-xs text-gray-500 font-medium flex items-center gap-1 hidden sm:inline-flex">
+      <span className="text-xs text-gray-500 font-medium items-center gap-1 hidden sm:inline-flex">
         <ArrowUpDown className="w-3.5 h-3.5" /> Sort by:
       </span>
       <select

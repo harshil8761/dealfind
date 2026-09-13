@@ -67,7 +67,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
           onFocus={() => setIsOpen(true)}
           placeholder={placeholder}
           className={cn(
-            'w-full bg-white border border-gray-300 rounded-lg text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 shadow-sm transition-all',
+            'w-full bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 shadow-sm transition-all',
             size === 'large' ? 'py-3.5 pl-11 pr-24 text-base' : 'py-2 pl-9 pr-20 text-sm'
           )}
         />
@@ -94,7 +94,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
         <button
           type="submit"
           className={cn(
-            'absolute right-1 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-medium rounded-md transition-colors shadow-sm',
+            'absolute right-1 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-700 text-white font-medium rounded-md transition-colors shadow-sm',
             size === 'large' ? 'px-4 py-2 text-sm' : 'px-3 py-1 text-xs'
           )}
         >
@@ -104,7 +104,7 @@ export const SearchBar: React.FC<SearchBarProps> = ({
 
       {/* Autocomplete Dropdown */}
       {isOpen && (
-        <div className="absolute top-full left-0 right-0 mt-1.5 bg-white border border-gray-200 rounded-lg shadow-lg z-50 overflow-hidden divide-y divide-gray-100 text-sm">
+        <div className="absolute top-full left-0 right-0 mt-1.5 bg-white border border-gray-200 rounded-lg shadow-lg z-50 overflow-hidden divide-y text-sm">
           {/* Recent Searches */}
           {recentSearches.length > 0 && (
             <div className="p-3">

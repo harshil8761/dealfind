@@ -2,10 +2,14 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { SearchBar } from '../search/SearchBar';
-import { Search, Heart, Menu, X, Tag } from 'lucide-react';
+import { Search, Heart, Menu, X } from 'lucide-react';
 
 export const Header: React.FC = () => {
+  const pathname = usePathname();
+  const isHomepage = pathname === '/';
+
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileSearchOpen, setMobileSearchOpen] = useState(false);
 
@@ -15,11 +19,8 @@ export const Header: React.FC = () => {
         <div className="flex items-center justify-between h-16 gap-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <div className="w-8 h-8 rounded-lg bg-indigo-600 flex items-center justify-center text-white font-bold text-lg shadow-sm">
-              D
-            </div>
             <div className="flex flex-col">
-              <span className="text-lg font-black tracking-tight text-gray-900 leading-none">
+              <span className="text-xl font-black tracking-tight text-gray-900 leading-none">
                 Deal<span className="text-indigo-600">Find</span>
               </span>
               <span className="text-[10px] text-gray-400 font-medium tracking-wide">
@@ -35,6 +36,9 @@ export const Header: React.FC = () => {
             </Link>
             <Link href="/search" className="hover:text-indigo-600 transition-colors">
               Explore Deals
+            </Link>
+            <Link href="/blog" className="hover:text-indigo-600 transition-colors">
+              Blog
             </Link>
             <Link href="/saved" className="hover:text-indigo-600 transition-colors flex items-center gap-1">
               <Heart className="w-4 h-4 text-rose-500" />
@@ -107,9 +111,16 @@ export const Header: React.FC = () => {
             Explore All Deals
           </Link>
           <Link
+            href="/blog"
+            onClick={() => setMobileMenuOpen(false)}
+            className="block py-2 px-3 rounded-md hover:bg-gray-50 text-gray-700"
+          >
+            Blog & Buyer Guides
+          </Link>
+          <Link
             href="/saved"
             onClick={() => setMobileMenuOpen(false)}
-            className="block py-2 px-3 rounded-md hover:bg-gray-50 text-gray-700 flex items-center gap-2"
+            className="py-2 px-3 rounded-md hover:bg-gray-50 text-gray-700 flex items-center gap-2"
           >
             <Heart className="w-4 h-4 text-rose-500" />
             <span>Saved Products</span>

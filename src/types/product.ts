@@ -26,6 +26,7 @@ export type Product = {
   features: string[];
   popularityScore: number;
   affiliateUrl: string;
+  sourceType?: 'mock' | 'api';
   badge?: ProductBadgeType;
   marketplacePrices?: {
     marketplace: Marketplace;

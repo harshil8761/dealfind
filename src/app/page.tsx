@@ -1,6 +1,5 @@
 import React from 'react';
 import Link from 'next/link';
-import { SearchBar } from '@/components/search/SearchBar';
 import { CategoryGrid } from '@/components/categories/CategoryGrid';
 import { ProductGrid } from '@/components/products/ProductGrid';
 import { productProvider } from '@/lib/providers';
@@ -26,11 +25,6 @@ export default async function HomePage() {
           <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
             Search by product, category, or budget and discover top-rated matching options instantly.
           </p>
-        </div>
-
-        {/* Big Search Input */}
-        <div className="max-w-xl mx-auto">
-          <SearchBar size="large" />
         </div>
 
         {/* Clickable Popular Search Chips */}
@@ -104,7 +98,7 @@ export default async function HomePage() {
       </section>
 
       {/* How It Works */}
-      <section className="bg-gradient-to-b from-gray-50 to-white rounded-xl border border-gray-200 p-6 sm:p-8 text-center space-y-6">
+      <section className="bg-linear-to-b from-gray-50 to-white rounded-xl border border-gray-200 p-6 sm:p-8 text-center space-y-6">
         <div>
           <h2 className="text-xl font-bold text-gray-900">How DealFind Works</h2>
           <p className="text-xs text-gray-500">3 easy steps to discovering your ideal product</p>

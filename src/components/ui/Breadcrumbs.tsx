@@ -27,7 +27,7 @@ export const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items }) => {
               {item.label}
             </Link>
           ) : (
-            <span className="font-medium text-gray-900 truncate max-w-[200px] sm:max-w-none">
+            <span className="font-medium text-gray-900 truncate max-w-50 sm:max-w-none">
               {item.label}
             </span>
           )}

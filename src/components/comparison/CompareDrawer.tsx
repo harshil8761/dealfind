@@ -92,7 +92,7 @@ export const CompareDrawer: React.FC<CompareDrawerProps> = ({
 
             {/* Matrix Content Table */}
             <div className="p-4 overflow-x-auto flex-1">
-              <table className="w-full text-left border-collapse min-w-[600px]">
+              <table className="w-full text-left border-collapse min-w-150">
                 <thead>
                   <tr className="border-b border-gray-200">
                     <th className="p-3 w-40 text-xs font-bold text-gray-500 uppercase bg-gray-50">Feature</th>
