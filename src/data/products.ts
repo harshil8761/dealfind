@@ -723,7 +723,7 @@ export const MOCK_PRODUCTS: Product[] = [
     originalPrice: 2199,
     rating: 4.4,
     reviewCount: 15400,
-    image: 'https://images.unsplash.com/photo-1609592424074-8b63e80f0896?auto=format&fit=crop&w=600&q=80',
+    image: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?auto=format&fit=crop&w=600&q=80',
     marketplace: 'Amazon',
     availability: 'In Stock',
     discount: 54,

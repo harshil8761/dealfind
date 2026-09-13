@@ -83,22 +83,22 @@ export const ProductCard: React.FC<ProductCardProps> = ({
             size="md"
           />
 
-          {/* Action Row: Compare Checkbox + View Deal CTA */}
+          {/* Action Row: Compare Button + View Deal CTA */}
           <div className="flex items-center gap-2 pt-1">
             {onCompareToggle && (
               <button
                 type="button"
                 onClick={() => onCompareToggle(product)}
                 className={cn(
-                  'px-2 py-1.5 rounded border text-xs font-medium flex items-center gap-1 transition-colors',
+                  'px-2.5 py-2 rounded-lg border text-xs font-semibold flex items-center gap-1.5 transition-all shrink-0 cursor-pointer',
                   isComparing
                     ? 'bg-indigo-50 border-indigo-300 text-indigo-700'
-                    : 'border-gray-200 text-gray-600 hover:bg-gray-50'
+                    : 'border-gray-300 bg-white text-gray-700 hover:bg-gray-50 hover:border-gray-400'
                 )}
                 title="Compare with another product"
               >
-                <ArrowRightLeft className="w-3.5 h-3.5" />
-                <span className="hidden sm:inline">{isComparing ? 'Comparing' : 'Compare'}</span>
+                <ArrowRightLeft className="w-3.5 h-3.5 text-gray-500 shrink-0" />
+                <span className="whitespace-nowrap">{isComparing ? 'Comparing' : 'Compare'}</span>
               </button>
             )}
 
@@ -106,10 +106,10 @@ export const ProductCard: React.FC<ProductCardProps> = ({
               href={dealUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex-1 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-medium text-xs py-2 px-3 rounded flex items-center justify-center gap-1.5 transition-colors shadow-sm"
+              className="flex-1 bg-indigo-600 hover:bg-indigo-700 active:bg-indigo-800 text-white font-semibold text-xs py-2 px-3 rounded-lg flex items-center justify-center gap-1.5 transition-all shadow-xs whitespace-nowrap"
             >
               <span>View Deal</span>
-              <ExternalLink className="w-3.5 h-3.5" />
+              <ExternalLink className="w-3.5 h-3.5 shrink-0" />
             </a>
           </div>
         </div>
